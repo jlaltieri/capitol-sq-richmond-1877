@@ -70,11 +70,14 @@ body {
 
 input[type="range"] {
     -webkit-appearance: none;
-    margin: 8px 15px 0px 5px;
+    margin-right: 15px;
     width: 110px;
     height: 3px;
-    background: var(--slider-bg-color);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
+    background-image: linear-gradient(var(--slider-bg-color), var(--slider-bg-color));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* Input Thumb */
@@ -84,6 +87,9 @@ input[type="range"]::-webkit-slider-thumb {
     width: 14px;
     border-radius: 50%;
     background: var(--slider-bg-color);
+    cursor: default;
+    /* box-shadow: 0 0 2px 0 #555; */
+    transition: background .3s ease-in-out;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -91,7 +97,12 @@ input[type="range"]::-moz-range-thumb {
     height: 14px;
     width: 14px;
     border-radius: 50%;
+    border: 1px solid rgb(79, 10, 10);
+    /* border-color: black; */
     background: var(--slider-bg-color);
+    cursor: default;
+    /* box-shadow: 0 0 2px 0 #555; */
+    transition: background .3s ease-in-out;
 }
 
 input[type="range"]::-ms-thumb {
@@ -100,18 +111,43 @@ input[type="range"]::-ms-thumb {
     width: 14px;
     border-radius: 50%;
     background: var(--slider-bg-color);
+    cursor: default;
+    /* box-shadow: 0 0 2px 0 #555; */
+    transition: background .3s ease-in-out;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background: rgba(0, 0, 255, 1);
+    background: #ff0200
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-    background: rgba(0, 0, 255, 1);
+    background: #ff0200;
 }
 
 input[type="range"]::-ms-thumb:hover {
-    background: rgba(0, 0, 255, 1);
+    background: #ff0200
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
 }
 
 #zoom_control {
